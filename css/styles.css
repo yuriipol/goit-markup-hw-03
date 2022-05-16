@@ -27,7 +27,15 @@ body {
     text-align: center;
 }
 /*style header*/
+.page-header {
+    display: flex;
+    align-items: center;
+} 
 .logo {
+    outline: 2px solid tomato;
+    width: 145px;
+    height: 31px;
+    margin: 24px 93px 25px 215px;
     color: var(--primary-text-color);
     text-decoration: none;
     font-family: Raleway, sans-serif;
@@ -37,6 +45,13 @@ body {
 }
 .web {
     color: #2196F3;
+}
+.site-nav {
+    outline: 2px solid tomato;
+    display: flex;
+    width: 294px;
+    height: 16px;
+    align-items: center;
 }
 
 /*style menu-nav*/
