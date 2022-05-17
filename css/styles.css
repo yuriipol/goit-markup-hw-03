@@ -45,6 +45,7 @@ body {
 }
 .site-nav {
     display: flex;
+    padding: 0%;
 }
 .site-nav .link {
     outline: 2px solid tomato;
