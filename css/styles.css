@@ -5,6 +5,14 @@
     --primary-white-color:#ffffff;
     --button-color:#F5F4FA;
 }
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
 body {
    background-color: var(--primary-white-color);
    color: var(--primary-text-color);
@@ -33,6 +41,7 @@ body {
 }  
 .logo {
     outline: 2px solid tomato;
+    margin: 24px 93px 25px 215px;
     color: var(--primary-text-color);
     text-decoration: none;
     font-family: Raleway, sans-serif;
@@ -45,10 +54,12 @@ body {
 }
 .site-nav {
     display: flex;
-    padding: 0%;
+    align-items: center;
+    padding: 0;
 }
 .site-nav .link {
     outline: 2px solid tomato;
+    margin-right: 50px;
 } 
 /*style menu-nav*/
 .site-nav .link {
@@ -68,6 +79,7 @@ body {
 .contacts.list {
     outline: 2px solid tomato;
     display: flex;
+    padding: 0;
 }
 .contacts.list .mail {
     outline: 2px solid tomato;
