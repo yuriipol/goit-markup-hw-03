@@ -5,14 +5,7 @@
   --primary-white-color: #ffffff;
   --button-color: #f5f4fa;
 }
-/* html {
-    box-sizing: border-box;
-}
-*,
-*::before,
-*::after {
-    box-sizing: inherit;
-} */
+
 body {
   margin: 0;
   background-color: var(--primary-white-color);
@@ -28,19 +21,35 @@ body {
   margin: 0;
   list-style: none;
 }
-
+/* скрываем заголовки */
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  margin: -1px;
+}
 .link {
   text-decoration: none;
 }
 .section-title {
   padding: 0;
-  margin: 50px;
+  margin: 0;
+  margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
 }
 /*style header*/
-
+.header {
+  display: flex;
+  align-items: center;
+}
 .conteiner {
   width: 1200px;
   margin: 0 auto;
@@ -52,8 +61,11 @@ body {
   border-bottom: 1px solid #ececec;
 }
 .logo {
+  display: block;
+  padding-top: 24px;
+  padding-bottom: 25px;
+  margin-right: 93px;
   outline: 2px solid tomato;
-  /* margin: 24px 93px 25px 215px; */
   color: var(--primary-text-color);
   text-decoration: none;
   font-family: Raleway, sans-serif;
@@ -64,8 +76,17 @@ body {
 .web {
   color: #2196f3;
 }
+.site-nav {
+  display: flex;
+}
 
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
   outline: 2px solid tomato;
 }
 /*style menu-nav*/
@@ -82,10 +103,22 @@ body {
 .site-nav .link:focus {
   color: var(--accent-color);
 }
-/*Style mail&telefon*/
-
+/* Style contacts */
+.contacts.list {
+  display: flex;
+  margin-left: 331px;
+}
+.contacts.list .contacts.item + .contacts.item {
+  margin-left: 50px;
+}
+.mail,
+.tel {
+  display: block;
+}
 .contacts.list .mail {
   outline: 2px solid tomato;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--title-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -94,6 +127,8 @@ body {
 }
 .contacts.list .tel {
   outline: 2px solid tomato;
+  padding-top: 32px;
+  padding-bottom: 32px;
   color: var(--title-text-color);
   text-decoration: none;
   font-weight: 500;
@@ -150,9 +185,16 @@ body {
 .peculiarities {
   margin-bottom: 94px;
 }
+.section.list {
+  display: flex;
+}
+.peculiarities-item:not(:last-child) {
+  margin-right: 30px;
+}
 .title {
   padding: 0;
   margin: 0;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -168,20 +210,37 @@ body {
 .works {
   margin-bottom: 94px;
 }
-
+.work-process {
+  display: block;
+}
+.work.list {
+  display: flex;
+}
+.work-list-process:not(:last-child) {
+  margin-right: 30px;
+}
 /*Style Our team */
+.team .list {
+  padding: 0;
+}
+.team.list.image {
+  display: block;
+  margin-bottom: 30px;
+}
+.team.list {
+  display: flex;
+}
+.team-list-card:not(:last-child) {
+  margin-right: 30px;
+}
 .team {
   background: #f5f4fa;
   padding-top: 94px;
   padding-bottom: 94px;
 }
-.team .list {
-  padding: 0;
-}
-.team.list.image {
-  margin-bottom: 30px;
-}
+
 .team-card {
+  text-align: center;
   border: 2px solid transparent;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
@@ -210,15 +269,25 @@ body {
 }
 .adress {
   font-style: normal;
+  outline: 2px solid tomato;
 }
 .logo-footer {
+  display: inline-block;
+  margin-bottom: 20px;
   color: var(--primary-white-color);
   text-decoration: none;
   font-family: Raleway, sans-serif;
   font-weight: 700;
   font-size: 26px;
   line-height: 1.19;
+  outline: 2px solid tomato;
 }
+.adress-post,
+.adress.list .mail {
+  display: inline-block;
+  margin-bottom: 9px;
+}
+
 .adress.list .adress-post {
   color: var(--primary-white-color);
   text-decoration: none;
@@ -239,11 +308,17 @@ body {
   color: var(--accent-color);
 }
 /*Style porfolio*/
+.work-section {
+  margin-top: 94px;
+  margin-bottom: 94px;
+}
 /*Style buttom*/
 .filtr {
   padding: 0;
   margin: 0;
+  margin-bottom: 34px;
   list-style: none;
+  outline: 2px solid tomato;
 }
 .work-title,
 .work-dicript {
@@ -273,7 +348,21 @@ body {
   color: var(--primary-white-color);
 }
 /*Style work list*/
-
+.work.list.pages {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.work.list {
+  outline: 2px solid tomato;
+}
+.work.list > .item {
+  border: 1px solid #eeeeee;
+  text-align: center;
+}
+/* .work.list.pages .item:not(:last-child) {
+  margin-right: 30px;
+} */
 .work.list .work-title {
   margin-bottom: 4px;
   color: var(--primary-text-color);
