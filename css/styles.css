@@ -383,10 +383,16 @@ body {
 /* .work.list {
    outline: 2px solid tomato; 
 } */
+/* Идеальное решение при изменении 
+размеров контейнера */
+/* .work.list.pages > .item {
+  width: calc((100%-60px) / 3);
+  text-align: center;
+  margin-right: 30px;
+  margin-bottom: 30px;
+} */
+
 .work.list.pages > .item {
-  /* border-right: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
-  border-left: 1px solid #eeeeee; */
   text-align: center;
   width: 370px;
   margin-right: 30px;
