@@ -152,6 +152,8 @@ body {
 }
 .hero-title {
   margin-top: 0;
+  width: 696px;
+  margin: 0 auto;
   margin-bottom: 30px;
   color: var(--primary-white-color);
   font-size: 44px;
