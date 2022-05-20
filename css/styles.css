@@ -385,19 +385,17 @@ body {
 } */
 /* Идеальное решение при изменении 
 размеров контейнера */
-/* .work.list.pages > .item {
-  width: calc((100%-60px) / 3);
-  text-align: center;
-  margin-right: 30px;
-  margin-bottom: 30px;
-} */
-
 .work.list.pages > .item {
-  /* text-align: center; */
-  width: 370px;
+  flex-basis: calc((100% - 30px * 3) / 3);
   margin-right: 30px;
   margin-bottom: 30px;
 }
+
+/* .work.list.pages > .item {
+  width: 370px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+} */
 .work.list.pages > .item:nth-child(3n) {
   margin-right: 0;
 }
