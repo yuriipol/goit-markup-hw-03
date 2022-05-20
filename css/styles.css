@@ -34,9 +34,11 @@ body {
   clip-path: inset(50%);
   margin: -1px;
 }
+/* Убираем нижненн подчеркивание у ссылок */
 .link {
   text-decoration: none;
 }
+/* Заголовки 2 уровня */
 .section-title {
   padding: 0;
   margin: 0;
@@ -143,7 +145,8 @@ body {
 .contacts.list .tel:focus {
   color: var(--accent-color);
 }
-/* Style main*/
+/* Style main content*/
+/* Style section Hero */
 .hero {
   background-color: #2f303a;
   text-align: center;
@@ -230,10 +233,15 @@ body {
 }
 .team.list.image {
   display: block;
-  margin-bottom: 30px;
 }
 .team.list {
   display: flex;
+}
+.team-list-card {
+  text-align: center;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-list-card:not(:last-child) {
   margin-right: 30px;
@@ -244,12 +252,8 @@ body {
   padding-bottom: 94px;
 }
 
-.team-card {
-  text-align: center;
-  border: 2px solid transparent;
-  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
-    0px 2px 1px rgba(0, 0, 0, 0.2);
-  border-radius: 0px 0px 4px 4px;
+.team-card-disc {
+  padding: 30px;
 }
 .team.list .name {
   padding: 0;
@@ -290,6 +294,8 @@ body {
 .adress-post,
 .adress.list .mail {
   display: inline-block;
+}
+.adress.list .adress-list-item:not(:last-child) {
   margin-bottom: 9px;
 }
 
@@ -323,7 +329,7 @@ body {
 .filtr {
   padding: 0;
   margin: 0;
-  margin-bottom: 34px;
+  margin-bottom: 50px;
   list-style: none;
   /* outline: 2px solid tomato; */
   display: flex;
@@ -391,7 +397,8 @@ body {
   margin-bottom: 30px;
 }
 
-/* .work.list.pages > .item {
+/* 2-й вариант решения:
+  .work.list.pages > .item {
   width: 370px;
   margin-right: 30px;
   margin-bottom: 30px;
